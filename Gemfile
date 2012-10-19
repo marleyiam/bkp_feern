@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'mongoid'
 gem 'unicorn'
+gem 'devise'
 
 gem 'rails', '3.2.8'
 group :assets do
