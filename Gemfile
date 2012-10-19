@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'mongoid'
 gem 'unicorn'
 gem 'devise'
+gem 'redis'
+gem 'imperavi-rails', '0.0.12.beta'
 
 gem 'rails', '3.2.8'
 group :assets do

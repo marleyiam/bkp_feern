@@ -1,0 +1,6 @@
+<h2>Programação</h2>
+
+<%= form_for [:admin, @schedule], url: refresh_admin_schedule_index_path do |f| %>
+  <%= f.text_area :schedule_text %>
+  <%= f.submit 'Atualizar Programação' %>
+<% end %>
