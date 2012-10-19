@@ -81,5 +81,4 @@ test:
 production:
   sessions:
     default:
-      database: feern_production
       uri: <%= ENV['MONGOLAB_URI'] %>
