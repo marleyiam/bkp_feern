@@ -6,8 +6,12 @@ Feern::Application.routes.draw do
       post :refresh, on: :collection
     end
 
+    resources :subscriptions
     root to: 'schedule#index'
   end
+
+  resources :subscriptions, only: [:new, :create]
+  match 'inscreva-se' => 'subscriptions#new'
 
   root to: 'home#index'
 end

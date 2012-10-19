@@ -1,0 +1,28 @@
+<h2>Inscrições</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Empresa/Instituição</th>
+      <th>E-mail</th>
+      <th>Telefone</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subscriptions.each do |subscription| %>
+      <tr>
+        <td><%= link_to subscription.nome, admin_subscription_path(subscription) %></td>
+        <td><%= subscription.cpf %></td>
+        <td><%= subscription.empresa %></td>
+        <td><%= subscription.telefone %></td>
+        <td>
+          <%= link_to 'Excluir', admin_subscription_path(subscription), confirm: 'Você tem certeza?', method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
