@@ -8,4 +8,6 @@ Feern::Application.routes.draw do
 
     root to: 'schedule#index'
   end
+
+  root to: 'home#index'
 end

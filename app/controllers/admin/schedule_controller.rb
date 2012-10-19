@@ -12,7 +12,7 @@ class Admin::ScheduleController < ApplicationController
   def refresh
     @schedule = Schedule.new(params[:schedule])
     if @schedule.valid?
-      @schedule = Schedule.update(params[:schedule][:schedule_text])
+      @schedule.update
       redirect_to admin_schedule_index_path, notice: 'Programação atualizada com sucesso!'
     else
       render :index

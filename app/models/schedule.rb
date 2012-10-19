@@ -22,11 +22,11 @@ class Schedule
   end
   
   def self.get
-      Schedule.new(schedule_text: $redis.get('feern-schedule'))
+    Schedule.new(schedule_text: $redis.get('feern-schedule'))
   end
 
-  def self.update(schedule_text)
-    $redis.set 'feern-schedule', schedule_text
-    get
+  def update
+    $redis.set 'feern-schedule', @schedule_text
+    self
   end
 end
