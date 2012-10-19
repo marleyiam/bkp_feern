@@ -5,5 +5,7 @@ Feern::Application.routes.draw do
     resources :schedule, only: [:index] do
       post :refresh, on: :collection
     end
+
+    root to: 'schedule#index'
   end
 end
