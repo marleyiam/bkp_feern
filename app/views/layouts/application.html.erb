@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container">
+    <header class="site-header">
+      <%= image_tag 'banner_feern.png', class: 'logo' %>
+    </header>
+    <div class="content">
+      <div class="main-content"
+        <%= yield %>
+      </div>
+      <div class="sidebar">
+        <h1>Sidebar</h1>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

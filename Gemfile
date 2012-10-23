@@ -9,6 +9,9 @@ gem 'redis'
 gem 'simple_form'
 gem 'bootstrap-wysihtml5-rails'
 
+gem 'bourbon'
+gem 'neat'
+
 gem 'rails', '3.2.8'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
