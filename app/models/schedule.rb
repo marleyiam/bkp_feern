@@ -3,8 +3,8 @@ class Schedule
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  validates_presence_of :schedule_text
-  attr_accessor :schedule_text
+  validates_presence_of :schedule_type, :schedule_text
+  attr_accessor :schedule_type, :schedule_text
 
   def initialize(attributes = {})
     @attributes = attributes
@@ -21,12 +21,12 @@ class Schedule
     false
   end
   
-  def self.get
-    Schedule.new(schedule_text: $redis.get('feern-schedule'))
+  def self.get(type='feern-schedule')
+    Schedule.new(schedule_type: type, schedule_text: $redis.get(type))
   end
 
   def update
-    $redis.set 'feern-schedule', @schedule_text
+    $redis.set @schedule_type, @schedule_text
     self
   end
 end

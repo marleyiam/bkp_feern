@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @schedule = Schedule.get
+    @schedule = Schedule.get('short-feern-schedule')
   end
 end

@@ -1,6 +1,7 @@
 <h2>Programação</h2>
 
 <%= simple_form_for [:admin, @schedule], url: refresh_admin_schedule_index_path, html: { class: 'form-vertical' } do |f| %>
+  <%= f.input :schedule_type, as: :hidden %>
   <%= f.input :schedule_text, label: 'Programação', as: :text, input_html: { class: 'span12' } %>
   
   <div class="form-actions">
