@@ -2,6 +2,7 @@ class Subscription
   include Mongoid::Document
 
   field :nome,      type: String
+  field :cargo,     type: String
   field :cpf,       type: String
   field :empresa,   type: String
   field :endereco,  type: String
