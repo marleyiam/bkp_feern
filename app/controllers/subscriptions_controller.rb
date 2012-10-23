@@ -1,7 +1,7 @@
 #encoding: utf-8
 
 class SubscriptionsController < ApplicationController
-  before_filter :check_availability
+  #before_filter :check_availability
 
   respond_to :html
 
