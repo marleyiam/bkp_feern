@@ -18,9 +18,36 @@ header.site-header {
 
   .main-content {
     @include span-columns(9);
+    text-align: justify;
+
+    h1 {
+      font-size: 27px;
+      border-bottom: 1px dashed #e2e2e2;
+      padding-bottom: 12px;
+      color: #f29400;
+    }
+
+    h3 {
+      @include pad(8px);
+      background-color: #f4f4f4;
+      border-bottom: 1px solid #e2e2e2;
+    }
   }
 
   .sidebar {
     @include span-columns(3);
+    text-align: center;
+
+    .subscribe {
+      @include button(simple, #0090d7);
+    }
+
+    .schedule-pdf {
+      @include button(simple, #73b729);
+    }
+
+    img {
+      margin-bottom: 12px;
+    }
   }
 }

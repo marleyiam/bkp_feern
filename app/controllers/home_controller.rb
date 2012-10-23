@@ -7,4 +7,7 @@ class HomeController < ApplicationController
     @schedule = Schedule.get('feern-schedule')
     render :index
   end
+
+  def exemplo_estilo
+  end
 end

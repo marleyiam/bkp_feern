@@ -13,6 +13,7 @@ Feern::Application.routes.draw do
   resources :subscriptions, only: [:new, :create]
   match 'inscreva-se' => 'subscriptions#new'
   match 'progcompleta' => 'home#progcompleta'
+  match 'exemplo_estilo' => 'home#exemplo_estilo'
 
   root to: 'home#index'
 end
