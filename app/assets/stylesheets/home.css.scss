@@ -5,3 +5,55 @@ ul {
   padding-left: 12px;
   list-style: none;
 }
+
+.subscribe-wrapper {
+  @include outer-container;
+  @include pad;
+
+  background-color: #3a3a3a;
+
+  .subscribe-text {
+    @include span-columns(9);
+    color: white;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: -3px;
+    }
+  }
+
+  .subscribe-button {
+    @include span-columns(3);
+    @include button(simple, #015eab);
+    @include pad;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.box-bottom {
+  @include outer-container;
+
+  div {
+    @include span-columns(6);
+    .logo-apoio-iniciativa {
+      width: 148px;
+      height: 150px;
+      background-color: #ccc;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  tbody {
+    tr {
+      td {
+        border: 1px solid #e2e2e2;
+        text-align: center;
+        @include pad;
+      }
+    }
+  }
+}

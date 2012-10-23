@@ -3,6 +3,16 @@ body {
   font-family: $helvetica;
 }
 
+a {
+  text-decoration: none;
+  color: #015eab;
+  &:hover {
+    color: #0090d7;
+  }
+}
+
+
+
 header.site-header {
   @include span-columns(5, inline-block);
   @include shift(3.5);
@@ -16,16 +26,15 @@ header.site-header {
   @include outer-container;
   background-color: white;
 
-  .main-content {
-    @include span-columns(9);
-    text-align: justify;
-
+  .box {
     h1 {
-      font-size: 27px;
-      border-bottom: 1px dashed #e2e2e2;
-      padding-bottom: 12px;
-      color: #f29400;
+      font-size: 26px;
+      text-align: center;
     }
+  }
+
+  .main-content {
+    text-align: justify;
 
     h3 {
       @include pad(8px);
