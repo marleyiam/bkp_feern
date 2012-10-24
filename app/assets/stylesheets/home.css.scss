@@ -15,10 +15,11 @@ ul {
   .subscribe-text {
     @include span-columns(9);
     color: white;
+    text-align: justify;
 
     h2 {
-      font-size: 20px;
-      margin-bottom: -3px;
+      font-size: 18px;
+      margin-top: 0px;
     }
   }
 
@@ -26,7 +27,7 @@ ul {
     @include span-columns(3);
     @include button(simple, #015eab);
     @include pad;
-    font-size: 20px;
+    font-size: 17px;
     text-align: center;
   }
 }
