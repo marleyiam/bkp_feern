@@ -26,11 +26,36 @@ header.site-header {
   @include outer-container;
   background-color: white;
 
-  .box {
-    h1 {
-      font-size: 26px;
-      text-align: center;
+  .box-bottom {
+    @include outer-container;
+
+    div {
+      @include span-columns(6);
+      .logo-apoio-iniciativa {
+        width: 148px;
+        height: 150px;
+        background-color: #ccc;
+      }
     }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    tbody {
+      tr {
+        td {
+          border: 1px solid #e2e2e2;
+          text-align: center;
+          @include pad;
+        }
+      }
+    }
+  }
+  
+  h1 {
+    font-size: 26px;
+    text-align: center;
   }
 
   .main-content {
