@@ -15,5 +15,5 @@ Feern::Application.routes.draw do
   match 'progcompleta' => 'home#progcompleta'
   match 'exemplo_estilo' => 'home#exemplo_estilo'
 
-  root to: 'home#index'
+  root to: 'home#exemplo_estilo'
 end
