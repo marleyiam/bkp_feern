@@ -18,16 +18,35 @@ ul {
     text-align: justify;
 
     h2 {
-      font-size: 18px;
+      font-size: 14px;
       margin-top: 0px;
     }
   }
 
-  .subscribe-button {
+  .subscribe-links {
     @include span-columns(3);
-    @include button(simple, #015eab);
-    @include pad;
-    font-size: 17px;
-    text-align: center;
+
+    .subscribe-button {
+      @include button(simple, #015eab);
+      @include pad(10px);
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .subscribe-buttton-programacao {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 10px;
+
+      a {
+        color: white;
+        &:hover { color: #f29400; }
+      }
+
+      img {
+        width: 100px;
+      }
+    }
   }
 }

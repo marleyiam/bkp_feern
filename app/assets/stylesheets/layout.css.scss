@@ -2,6 +2,7 @@ body {
   background-image: image-url('grey.png');
   font-family: $helvetica;
   line-height: 130%;
+  font-size: 15px;
 }
 
 a {
@@ -11,8 +12,6 @@ a {
     color: #0090d7;
   }
 }
-
-
 
 header.site-header {
   @include span-columns(5, inline-block);
@@ -26,63 +25,102 @@ header.site-header {
   @include pad;
   @include outer-container;
   background-color: white;
-
-  .box-bottom {
-    @include outer-container;
-
-    div {
-      @include span-columns(6);
-      .logo-apoio-iniciativa {
-        width: 148px;
-        height: 150px;
-        background-color: #ccc;
-      }
-    }
-  }
+  margin-bottom: 60px;
 
   table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 13px;
+
     tbody {
+      tr:nth-child(even) {
+        background-color: #f4f4f4;
+      }
+
       tr {
         td {
           border: 1px solid #e2e2e2;
           text-align: center;
           @include pad;
         }
+        td:first-child {
+          width: 130px;
+        }
       }
     }
   }
   
   h1 {
-    font-size: 26px;
+    font-size: 20px;
     text-align: center;
+    margin-top: 0px;
   }
 
   .main-content {
+    @include span-columns(8);
     text-align: justify;
 
     h3 {
       @include pad(8px);
-      background-color: #f4f4f4;
+      background-color: #e2e2e2;
+      font-size: 14px;
       border-bottom: 1px solid #e2e2e2;
     }
   }
 
-  .sidebar {
-    @include span-columns(3);
+  .patrocinadores {
     text-align: center;
 
-    .subscribe {
-      @include button(simple, #0090d7);
-    }
-
-    .schedule-pdf {
-      @include button(simple, #73b729);
-    }
-
     img {
-      margin-bottom: 12px;
+      width: 200px;
+    }
+
+    .logo-ale {
+      width: 300px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .apoio-midia {
+    img { width: 135px; }
+  }
+
+  .sidebar {
+    @include span-columns(4);
+
+    .box {
+      h3 {
+        @include pad(8px);
+        background-color: #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
+        margin-top: 0px;
+        font-size: 14px;
+      }
+
+      img {
+        width: 125px;
+        margin-bottom: 12px;
+      }
+    }
+
+    .iniciativa-apoio {
+      img {
+        text-align: center;
+        margin-left: 12px;
+      }
+
+      .box-wrapper {
+        text-align: center;
+      }
+
+      .logo-assembleia { width: 250px; }
+      .logo-abeeolica { width: 220px; }
+    }
+
+    .news {
+      text-align: justify;
+      margin-top: 12px;
+      font-size: 12px;
     }
   }
 }
