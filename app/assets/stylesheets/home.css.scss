@@ -6,6 +6,8 @@ ul {
   list-style: none;
 }
 
+.event-place { text-align: center; }
+
 .subscribe-wrapper {
   @include outer-container;
   @include pad;
