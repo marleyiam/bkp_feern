@@ -14,13 +14,13 @@ a {
 }
 
 header.site-header {
-  @include span-columns(5, inline-block);
-  @include shift(3.5);
-  @include pad;
+  text-align: center;
+  margin-bottom: 5px;
+  @include span-columns(12, inline-block);
+  img { @include box-shadow(0 0 5px hsla(0, 0%, 0%, 0.25)); }
 }
 
 .content {
-  @include border-radius(5px);
   @include box-shadow(0 0 5px hsla(0, 0%, 0%, 0.25));
   @include pad;
   @include outer-container;
@@ -122,6 +122,13 @@ header.site-header {
       text-align: justify;
       margin-top: 12px;
       font-size: 12px;
+
+      a {
+        display: block;
+        padding-bottom: 6px;
+        border-bottom: 1px dashed #e2e2e2;
+        margin-bottom: 6px;
+      }
     }
   }
 }
