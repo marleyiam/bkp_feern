@@ -8,6 +8,13 @@ ul {
 
 .event-place { text-align: center; }
 
+.banner-fne { 
+  margin-top: 20px; 
+  text-align: center;
+
+  img { width: 400px; } 
+}
+
 .subscribe-wrapper {
   @include outer-container;
   @include pad;
