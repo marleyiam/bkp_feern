@@ -12,7 +12,7 @@ class Subscription
   field :twitter,   type: String
   field :facebook,  type: String
 
-  validates_presence_of :nome, :cpf, :empresa, :endereco, :email, :telefone
+  validates_presence_of :nome, :cpf, :cargo, :empresa, :endereco, :email, :telefone
   validates_uniqueness_of :cpf, :email
 
   def self.available?
