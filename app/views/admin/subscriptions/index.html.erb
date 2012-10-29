@@ -1,8 +1,9 @@
-<h2>Inscrições</h2>
+<h2>Inscrições <small>Total: <%= @subscriptions.size %></small></h2>
 
 <table class="table">
   <thead>
     <tr>
+      <th>Número</th>
       <th>Nome</th>
       <th>CPF</th>
       <th>Empresa/Instituição</th>
@@ -13,8 +14,9 @@
   </thead>
 
   <tbody>
-    <% @subscriptions.each do |subscription| %>
+    <% @subscriptions.each_with_index do |subscription, index| %>
       <tr>
+        <td><%= index + 1 %></td>
         <td><%= link_to subscription.nome, admin_subscription_path(subscription) %></td>
         <td><%= subscription.cpf %></td>
         <td><%= subscription.empresa %></td>
