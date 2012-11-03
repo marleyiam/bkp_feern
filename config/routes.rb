@@ -6,7 +6,9 @@ Feern::Application.routes.draw do
       post :refresh, on: :collection
     end
 
-    resources :subscriptions
+    resources :subscriptions do
+      get :export, on: :collection
+    end
     root to: 'schedule#index'
   end
 

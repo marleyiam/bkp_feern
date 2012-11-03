@@ -19,4 +19,13 @@ class Admin::SubscriptionsController < ApplicationController
 
     redirect_to admin_subscriptions_path, notice: 'Inscrição removida.'
   end
+
+  def export
+    subscriptions = Subscription.all
+    serializer = CSVSerializer.new(subscriptions: subscriptions)
+
+    filename = I18n.l(Time.now, :format => :short) + 'Inscritos-FEERN.csv'
+    
+    send_data serializer.serialize, :filename => filename
+  end
 end

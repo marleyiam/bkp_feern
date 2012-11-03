@@ -1,4 +1,4 @@
-<h2>Inscrições <small>Total: <%= @subscriptions.size %></small></h2>
+<h2>Inscrições <small>Total: <%= @subscriptions.size %> | <%= link_to 'Exportar CSV', export_admin_subscriptions_path %></small></h2>
 
 <table class="table">
   <thead>
