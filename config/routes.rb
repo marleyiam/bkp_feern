@@ -10,8 +10,10 @@ Feern::Application.routes.draw do
     root to: 'schedule#index'
   end
 
-  resources :subscriptions, only: [:new, :create]
-  match 'inscreva-se' => 'subscriptions#new'
+  #resources :subscriptions, only: [:new, :create]
+  
+  #match 'inscreva-se' => 'subscriptions#new'
+  
   match 'progcompleta' => 'home#progcompleta'
   match 'exemplo_estilo' => 'home#exemplo_estilo'
 
