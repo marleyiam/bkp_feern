@@ -15,6 +15,16 @@ ul {
   img { width: 100%; } 
 }
 
+.certificate-text {
+  @include pad;
+
+  font-size: 13px;
+  text-align: center;
+  color: white;
+  background-color: #015eab;
+  margin-bottom: 20px;
+}
+
 .subscribe-wrapper {
   @include outer-container;
   @include pad;
